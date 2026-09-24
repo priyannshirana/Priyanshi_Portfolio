@@ -178,7 +178,7 @@ export default function Home() {
             <div className="portrait-placeholder">
               <img
                 className="portrait-image"
-                src="/pri_image.jpeg"
+                src={`${import.meta.env.BASE_URL}pri_image.jpeg`}
                 alt="Priyanshi Rana"
               />
             </div>
@@ -261,14 +261,14 @@ export default function Home() {
               <h2 id="experience-title">Proof in practice.</h2>
             </div>
             <div className="timeline">
-              {experience.map(job => (
+              {experience.map((job) => (
                 <article className="timeline-item" key={job.role}>
                   <div className="timeline-date">{job.dates}</div>
                   <div className="timeline-content">
                     <h3>{job.role}</h3>
                     <p className="company">{job.company}</p>
                     <ul>
-                      {job.details.map(detail => (
+                      {job.details.map((detail) => (
                         <li key={detail}>{detail}</li>
                       ))}
                     </ul>
@@ -296,7 +296,7 @@ export default function Home() {
               </p>
             </div>
             <div className="project-list">
-              {projects.map(project => (
+              {projects.map((project) => (
                 <article
                   className={`project-card project-${project.color}`}
                   key={project.title}
@@ -316,12 +316,12 @@ export default function Home() {
                     <p className="project-stack">{project.stack}</p>
                   </div>
                   <ul className="project-bullets">
-                    {project.bullets.map(bullet => (
+                    {project.bullets.map((bullet) => (
                       <li key={bullet}>{bullet}</li>
                     ))}
                   </ul>
                   <div className="project-facts">
-                    {project.facts.map(fact => (
+                    {project.facts.map((fact) => (
                       <span key={fact}>{fact}</span>
                     ))}
                   </div>
@@ -345,11 +345,11 @@ export default function Home() {
               <h2 id="skills-title">The toolkit.</h2>
             </div>
             <div className="skill-groups">
-              {skillGroups.map(group => (
+              {skillGroups.map((group) => (
                 <div className="skill-group" key={group.label}>
                   <h3>{group.label}</h3>
                   <div className="skill-tags">
-                    {group.items.map(item => (
+                    {group.items.map((item) => (
                       <span key={item}>{item}</span>
                     ))}
                   </div>

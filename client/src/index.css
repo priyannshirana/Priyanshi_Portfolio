@@ -694,6 +694,9 @@ a:focus-visible {
 .certifications-section .section-heading-compact .eyebrow {
   color: #f1ded6;
 }
+.certifications-section .resume-kicker span:first-child {
+  color: var(--paper);
+}
 .certifications-section h2 {
   color: var(--paper);
 }
